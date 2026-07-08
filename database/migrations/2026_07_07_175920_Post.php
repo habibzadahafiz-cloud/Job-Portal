@@ -12,15 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         //
-        schema::create('login',function(Blueprint $table){
-            $table->increments('id');
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->string('Name');
-            $table->string('email');
-            $table->softDeletes();
-            $table->string('Password');
-        });
-    }
+        Schema::create("Post", function (Blueprint $table) {
+            $table->bigIncrements("id");
+            $table->string("title");
+            $table->string("discription");
+            $table->timestamps();
+            });
+
+
+            }
 
     /**
      * Reverse the migrations.
@@ -28,5 +28,6 @@ return new class extends Migration
     public function down(): void
     {
         //
+        Schema::dropIfExists("Post");
     }
 };

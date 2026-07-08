@@ -12,14 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         //
-        schema::create('login',function(Blueprint $table){
-            $table->increments('id');
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->string('Name');
-            $table->string('email');
-            $table->softDeletes();
-            $table->string('Password');
-        });
+        Schema::create("comments", function (Blueprint $table) {
+            $table->bigIncrements("id");
+            $table->unsignedBigInteger("Post_id");
+            $table->string("discraption");
+            $table->string("body");
+            $table->timestamps();
+           });
     }
 
     /**

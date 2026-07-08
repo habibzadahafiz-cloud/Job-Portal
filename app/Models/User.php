@@ -3,10 +3,14 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+// use App\Models\login\User as LoginUser;
+// use App\Models\login\UserLogin;
+// use App\Models\login\UserLoginLog;
+use App\Models\login;
+// use Illuminate\Support\Facades\Log;
 
 class User extends Authenticatable
 {
@@ -45,5 +49,8 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+    public function login(){
+        return $this->hasOne(login::class);
     }
 }
