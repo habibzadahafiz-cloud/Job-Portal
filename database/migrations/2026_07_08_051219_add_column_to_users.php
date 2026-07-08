@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
-        Schema::create("comments", function (Blueprint $table) {
-            $table->bigIncrements("id");
-            $table->unsignedBigInteger("Post_id");
-            $table->string("discraption");
-            $table->string("body");
-            $table->timestamps();
-           });
+        Schema::table('users', function (Blueprint $table) {
+            //
+            $table->string('user_type')->default('user');
+        });
     }
 
     /**
@@ -26,6 +22,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::table('users', function (Blueprint $table) {
+            //
+            $table->dropColumn('user_type');
+        });
     }
 };
