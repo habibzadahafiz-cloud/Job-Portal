@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://hospital.af/doctors -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dark Bootstrap Admin </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="./Dark Bootstrap Admin_files/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="./Dark Bootstrap Admin_files/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="./Dark Bootstrap Admin_files/font.css">
+    <!-- Google fonts - Muli-->
+    <link rel="stylesheet" href="./Dark Bootstrap Admin_files/css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="./Dark Bootstrap Admin_files/style.default.css" id="theme-stylesheet">
+
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="./Dark Bootstrap Admin_files/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="http://hospital.af/Admin_front/img/favicon.ico">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  <style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
+  <body>
+<style>
+        .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #fff !important;
+}
+
+button.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #fff !important;
+}
+
+    </style>
+
+
+
+    <div class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="search-panel">
+          <div class="search-inner d-flex align-items-center justify-content-center">
+            <div class="close-btn">Close <i class="fa fa-close"></i></div>
+            <form id="searchForm" action="http://hospital.af/doctors#">
+              <div class="form-group">
+                <input type="search" name="search" placeholder="What are you searching for...">
+                <button type="submit" class="submit">Search</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+          <div class="navbar-header">
+            <!-- Navbar Header--><a href="http://hospital.af/Admin_front/index.html" class="navbar-brand">
+              <div class="visible brand-text brand-big text-uppercase"><strong class="text-primary">Dark</strong><strong>Admin</strong></div>
+              <div class="brand-text brand-sm"><strong class="text-primary">D</strong><strong>A</strong></div></a>
+            <!-- Sidebar Toggle Btn-->
+            <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
+          </div>
+
+
+          <div class="right-menu list-inline no-margin-bottom">
+            <div class="list-inline-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="http://hospital.af/doctors#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link language dropdown-toggle"><span class="d-none d-sm-inline-block">English</span></a>
+              <div aria-labelledby="languages" class="dropdown-menu"><a rel="nofollow" href="http://hospital.af/lang/en" class="dropdown-item"><span>English</span></a><a rel="nofollow" href="http://hospital.af/lang/ps" class="dropdown-item"> <span>Pashto</span></a></div>
+            </div>
+
+    <!-- User Dropdown -->
+    <div class="list-inline-item dropdown">
+        <a id="userDropdown" href="http://hospital.af/doctors#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">
+
+            hafizullah
+        </a>
+
+        <div aria-labelledby="userDropdown" class="dropdown-menu dropdown-menu-right">
+
+            <a href="http://hospital.af/profile" class="dropdown-item">
+                <i class="fa fa-user"></i> Profile
+            </a>
+
+            <form method="POST" action="http://hospital.af/logout">
+                <input type="hidden" name="_token" value="3DXMmwBF8aJZJG6x2YIsAk8Jyk2imSrjp9zCS91i" autocomplete="off">                <button type="submit" class="dropdown-item" style="color: inherit; border:none; ">
+                    <i class="fa fa-sign-out"></i> Logout
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+        </div>
+      </nav>
+      </div>
+    
+
+
+
+
+
+
+          
+
+
+
+
+        
+    <div class="d-flex align-items-stretch">
+<!-- Sidebar Navigation-->
+      <nav id="sidebar">
+        <!-- Sidebar Header-->
+        <div class="sidebar-header d-flex align-items-center">
+          <div class="avatar"><img src="./Dark Bootstrap Admin_files/hafizullah.jpg" alt="Profile" class="img-fluid rounded-circle"></div>
+          <div class="title">
+            <h1 class="h5">hafizullah</h1>
+            <p>Admin</p>
+          </div>
+        </div>
+        <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+
+
+<ul class="list-unstyled">
+
+    <!-- Dashboard -->
+    <li>
+        <a href="http://hospital.af/dashboard">
+            <i class="fa fa-dashboard"></i> Dashboard
+        </a>
+    </li>
+
+    <!-- Doctors -->
+    <li>
+        <a href="http://hospital.af/doctors#doctorDropdown" data-toggle="collapse" aria-expanded="false">
+            <i class="fa fa-user-md"></i> Doctors
+        </a>
+
+        <ul id="doctorDropdown" class="collapse list-unstyled">
+            <li><a href="http://hospital.af/doctors">All Doctors</a></li>
+            <li><a href="http://hospital.af/doctors/create">Add Doctor</a></li>
+            <li><a href="http://hospital.af/schedule">Doctor Schedule</a></li>
+        </ul>
+    </li>
+
+    <!-- Patients -->
+    <li>
+        <a href="http://hospital.af/doctors#patientDropdown" data-toggle="collapse" aria-expanded="false">
+            <i class="fa fa-users"></i> Patients
+        </a>
+
+        <ul id="patientDropdown" class="collapse list-unstyled">
+            <li><a href="http://hospital.af/doctors#">All Patients</a></li>
+            <li><a href="http://hospital.af/doctors#">Add Patient</a></li>
+            <li><a href="http://hospital.af/doctors#">Patient History</a></li>
+        </ul>
+    </li>
+
+    <!-- Appointments -->
+    <li>
+        <a href="http://hospital.af/doctors#appointmentDropdown" data-toggle="collapse" aria-expanded="false">
+            <i class="fa fa-calendar"></i> Appointments
+        </a>
+
+        <ul id="appointmentDropdown" class="collapse list-unstyled">
+            <li><a href="http://hospital.af/doctors#">All Appointments</a></li>
+            <li><a href="http://hospital.af/doctors#">Create Appointment</a></li>
+            <li><a href="http://hospital.af/doctors#">Pending Appointments</a></li>
+        </ul>
+    </li>
+
+    <!-- Departments -->
+    <li>
+        <a href="http://hospital.af/doctors#departmentDropdown" data-toggle="collapse" aria-expanded="false">
+            <i class="fa fa-hospital-o"></i> Departments
+        </a>
+
+        <ul id="departmentDropdown" class="collapse list-unstyled">
+            <li><a href="http://hospital.af/departments">All Departments</a></li>
+            <li><a href="http://hospital.af/departments/create">Add Department</a></li>
+        </ul>
+    </li>
+
+    <!-- Medicines -->
+    <li>
+        <a href="http://hospital.af/doctors#medicineDropdown" data-toggle="collapse" aria-expanded="false">
+            <i class="fa fa-medkit"></i> Medicines
+        </a>
+
+        <ul id="medicineDropdown" class="collapse list-unstyled">
+            <li><a href="http://hospital.af/doctors#">Medicine List</a></li>
+            <li><a href="http://hospital.af/doctors#">Add Medicine</a></li>
+            <li><a href="http://hospital.af/doctors#">Stock Management</a></li>
+        </ul>
+    </li>
+
+    <!-- Reports -->
+    <li>
+        <a href="http://hospital.af/doctors#reportDropdown" data-toggle="collapse" aria-expanded="false">
+            <i class="fa fa-file-text"></i> Reports
+        </a>
+
+        <ul id="reportDropdown" class="collapse list-unstyled">
+            <li><a href="http://hospital.af/doctors#">Doctor Reports</a></li>
+            <li><a href="http://hospital.af/doctors#">Patient Reports</a></li>
+            <li><a href="http://hospital.af/doctors#">Income Reports</a></li>
+        </ul>
+    </li>
+
+    <!-- Settings -->
+    <li>
+        <a href="http://hospital.af/doctors#settingDropdown" data-toggle="collapse" aria-expanded="false">
+            <i class="fa fa-cog"></i> Settings
+        </a>
+
+        <ul id="settingDropdown" class="collapse list-unstyled">
+            <li><a href="http://hospital.af/doctors#">Profile</a></li>
+            <li><a href="http://hospital.af/doctors#">System Settings</a></li>
+        </ul>
+    </li>
+
+</ul>
+
+
+
+
+                
+        
+      </nav>
+      <!-- Sidebar Navigation end-->
+      <div class="page-content" style="padding-bottom: 70px;">
+
+
+<div class="container-fluid">
+
+<a href="http://hospital.af/doctors/create" class="mb-3 btn btn-success mt-5">
+   Add Doctor
+</a>
+<h2 style="text-align: center; font-family: &#39;Times New Roman&#39;, Times, serif;">All Doctors</h2>
+<table class="table">
+
+<thead>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Department</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>specialization</th>
+</tr>
+</thead>
+
+<tbody>
+
+
+<tr>
+    <td>1</td>
+    <td>hafizullah</td>
+    <td>HD</td>
+    <td>hafiz@gmail.com</td>
+    <td>0777387780</td>
+
+        <td>qwertyuiop</td>
+        <td>
+
+<a href="http://hospital.af/doctors/1/edit" class="btn btn-warning btn-sm">
+   Edit
+</a>
+
+<form action="http://hospital.af/doctors/1" method="POST" style="display:inline;">
+
+    <input type="hidden" name="_token" value="3DXMmwBF8aJZJG6x2YIsAk8Jyk2imSrjp9zCS91i" autocomplete="off">    <input type="hidden" name="_method" value="DELETE">
+    <button class="btn btn-primary btn-sm" onclick="return confirm(&#39;Delete Doctor?&#39;)">
+        Delete
+    </button>
+
+</form>
+
+</td>
+</tr>
+
+
+<tr>
+    <td>2</td>
+    <td>khan</td>
+    <td>HD</td>
+    <td>kahn@gmail.com</td>
+    <td>77728672</td>
+
+        <td>qwertyuiop[</td>
+        <td>
+
+<a href="http://hospital.af/doctors/2/edit" class="btn btn-warning btn-sm">
+   Edit
+</a>
+
+<form action="http://hospital.af/doctors/2" method="POST" style="display:inline;">
+
+    <input type="hidden" name="_token" value="3DXMmwBF8aJZJG6x2YIsAk8Jyk2imSrjp9zCS91i" autocomplete="off">    <input type="hidden" name="_method" value="DELETE">
+    <button class="btn btn-primary btn-sm" onclick="return confirm(&#39;Delete Doctor?&#39;)">
+        Delete
+    </button>
+
+</form>
+
+</td>
+</tr>
+
+
+<tr>
+    <td>4</td>
+    <td>khalil</td>
+    <td>HD</td>
+    <td>khalil@gmail.com</td>
+    <td>34567892</td>
+
+        <td>wertyuiopfgh</td>
+        <td>
+
+<a href="http://hospital.af/doctors/4/edit" class="btn btn-warning btn-sm">
+   Edit
+</a>
+
+<form action="http://hospital.af/doctors/4" method="POST" style="display:inline;">
+
+    <input type="hidden" name="_token" value="3DXMmwBF8aJZJG6x2YIsAk8Jyk2imSrjp9zCS91i" autocomplete="off">    <input type="hidden" name="_method" value="DELETE">
+    <button class="btn btn-primary btn-sm" onclick="return confirm(&#39;Delete Doctor?&#39;)">
+        Delete
+    </button>
+
+</form>
+
+</td>
+</tr>
+
+
+<tr>
+    <td>5</td>
+    <td>jamil</td>
+    <td>Cardiology</td>
+    <td>khan@gmail.com</td>
+    <td>456789</td>
+
+        <td>gshdcghhdcduhc</td>
+        <td>
+
+<a href="http://hospital.af/doctors/5/edit" class="btn btn-warning btn-sm">
+   Edit
+</a>
+
+<form action="http://hospital.af/doctors/5" method="POST" style="display:inline;">
+
+    <input type="hidden" name="_token" value="3DXMmwBF8aJZJG6x2YIsAk8Jyk2imSrjp9zCS91i" autocomplete="off">    <input type="hidden" name="_method" value="DELETE">
+    <button class="btn btn-primary btn-sm" onclick="return confirm(&#39;Delete Doctor?&#39;)">
+        Delete
+    </button>
+
+</form>
+
+</td>
+</tr>
+
+
+</tbody>
+
+</table>
+
+<div class="card mb-4" style="width: 600px;">
+    <div class="card-body">
+        <h4>Doctors By Department</h4>
+        <canvas id="doctorChart" height="349" width="698" style="display: block; box-sizing: border-box; height: 279.2px; width: 558.4px;"></canvas>
+    </div>
+</div>
+
+
+</div>
+<script src="./Dark Bootstrap Admin_files/chart.js.download"></script>
+
+<script>
+const ctx = document.getElementById('doctorChart');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [
+                            "HD",
+                            "Cardiology",
+                    ],
+        datasets: [{
+            label: 'Number of Doctors',
+            data: [
+                                    3,
+                                    1,
+                            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+
+
+        </div>
+
+    </div>
+<footer class="footer">
+          <div class="block footer__block no-margin-bottom">
+            <div class="text-center container-fluid">
+              <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+               <p class="no-margin-bottom">2026 © Your Hospital. Download From <a target="_blank" href="https://hospital.af/">Hospital.af</a>.</p>
+            </div>
+          </div>
+        </footer>
+    <!-- JavaScript files-->
+    <script src="./Dark Bootstrap Admin_files/jquery.min.js.download"></script>
+    <script src="./Dark Bootstrap Admin_files/popper.min.js.download"> </script>
+    <script src="./Dark Bootstrap Admin_files/bootstrap.min.js.download"></script>
+    <script src="./Dark Bootstrap Admin_files/jquery.cookie.js.download"> </script>
+    <script src="./Dark Bootstrap Admin_files/Chart.min.js.download"></script>
+    <script src="./Dark Bootstrap Admin_files/jquery.validate.min.js.download"></script>
+    <script src="./Dark Bootstrap Admin_files/charts-home.js.download"></script>
+    <script src="./Dark Bootstrap Admin_files/front.js.download"></script>
+
+
+
+    <style>
+
+    /* Chrome, Edge, Safari scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e; /* د scrollbar شالید */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333; /* د حرکت کوونکي برخې رنګ */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Firefox scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #333 #1e1e1e;
+}
+</style>
+  
+
+</body></html>
